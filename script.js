@@ -1,3 +1,5 @@
+
+
 function sample_word(joke){
     //grabs a non-common word from a given joke (so no "the", "or", "are")
     var blacklist = ["the", "of", "or", "are", "is", "to", "that", "for", "as"];
@@ -14,11 +16,20 @@ function sample_word(joke){
     }
 }
 
-console.log(sample_word("The quick brown fox jumps over the lazy dog"));
+$("#programming-button").on("click", function() {
 
-$.ajax({
-    url: queryURL,
-    method: "GET"
-}).then(function(response) {
+    var sampled_word = sample_word("The quick brown fox jumps over the lazy dog");
+    console.log(sampled_word);
 
+    var api_key = "XhXMrsEUUNOn44NMuFufbM8ji4bdOHdM"; //limit 42 requests per hour, 1000 requests per day
+    var queryURL = "https://api.giphy.com/v1/gifs/random?api_key=" + api_key +"&tag=" + sampled_word;
+    console.log(queryURL);
+
+    $.ajax({
+        url: queryURL,
+        method: "GET"
+    }).then(function(response) {
+        console.log(response);
+        $("#gif-display").attr("src", response.data.image_original_url);
+    });
 });
