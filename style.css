@@ -1,0 +1,53 @@
+body{ background-color: #ffd369;
+
+  }
+
+    button{align-content: center;
+        align-items: center;
+    margin-left: 10%;}
+
+    .header{
+    
+    height: 100px;
+    width: 400px;
+    margin-left: 400px;
+    font-family: 'Anton', sans-serif;
+    color: seashell;
+    font-size: 44px;}
+
+    .intro{ background-color: black;
+        color: seashell;
+        height: 40px;
+        width: 600px;
+        font-family: 'Anton', sans-serif;
+        font-size: 16px;
+        margin-left: 150px;
+        margin-top: 60px;
+        padding: 10px;}
+
+ .joke-display{
+     border: 2px black solid;
+     height: 200px;
+    width: 700px;
+    font-family: 'Anton', sans-serif;
+    color: seashell;
+margin-left: 150px;
+margin-top: 60px;}
+
+ .main-container{
+     align-content: center;
+     align-items: center;
+     border: 2px black solid;
+    margin-left: 10%;
+     overflow: hidden;
+     padding: 10px;
+     height: 760px;
+     width: 960px;
+
+     background: url(background.jpg);
+    /* background-attachment: fixed; */
+    background-size: 100%;
+    background-repeat: no-repeat;
+ }
+
+ 
