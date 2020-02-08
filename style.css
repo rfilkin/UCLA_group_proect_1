@@ -2,30 +2,37 @@ body{ background-color: #ffd369;
 
   }
 
+  button:hover{ background-color: blue;}
     button{
     align-content: center;
     align-items: center;
-    margin-left: 12%;
+    margin-left: 15%;
     background-color: #ffd369;
     border: solid 1px black;
     padding: 5px; 
-    font-family: 'Anton', sans-serif;}
+    font-family: 'Anton', sans-serif;
+    cursor: pointer;
+    box-shadow: 10px 0px 15px -5px rgba(0,0,0,0.75);
+  }
 
     .header{
     background-color: black;
     font-family: 'Anton', sans-serif;
+    font-size: 24px;
     color: seashell;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    
     justify-content: stretch;
     width: 100%;
    }
 
-    .item {background-color: black;
+    .item {
         color: seashell;
         font-family: 'Anton', sans-serif;
         font-size: 16px;
+        position: absolute;
+        left 250px;
         }
 
  .joke-display{
