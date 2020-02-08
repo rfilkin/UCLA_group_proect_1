@@ -2,25 +2,36 @@ body{ background-color: #ffd369;
 
   }
 
-    button{align-content: center;
-        align-items: center;
-    margin-left: 10%;}
+  button:hover{ background-color: blue;}
+    button{
+    align-content: center;
+    align-items: center;
+    margin-left: 15%;
+    background-color: #ffd369;
+    border: solid 1px black;
+    padding: 5px; 
+    font-family: 'Anton', sans-serif;
+    cursor: pointer;
+    box-shadow: 10px 0px 15px -5px rgba(0,0,0,0.75);
+  }
 
     .header{
-    
-    height: 100px;
-    width: 400px;
-    margin-left: 400px;
+    background-color: black;
     font-family: 'Anton', sans-serif;
+    font-size: 24px;
     color: seashell;
-    font-size: 44px;}
+    display: flex;
+    flex-direction: row;
+    
+    justify-content: stretch;
+    width: 100%;
+   }
 
-    .intro{ background-color: black;
+    .item {
         color: seashell;
-        height: 40px;
-        width: 600px;
         font-family: 'Anton', sans-serif;
         font-size: 16px;
+<<<<<<< HEAD
 <<<<<<< Updated upstream
         margin-left: 150px;
         margin-top: 60px;
@@ -30,6 +41,11 @@ body{ background-color: #ffd369;
         left: 870px;
         }
 >>>>>>> Stashed changes
+=======
+        position: absolute;
+        left 250px;
+        }
+>>>>>>> 57720601afd3e65dfd380a2f477c5217f489546f
 
  .joke-display,.second-display {
      border: 2px black solid;
@@ -38,6 +54,7 @@ body{ background-color: #ffd369;
     font-family: 'Anton', sans-serif;
 <<<<<<< Updated upstream
     color: seashell;
+<<<<<<< HEAD
 margin-left: 150px;
 margin-top: 60px;}
 =======
@@ -45,6 +62,10 @@ margin-top: 60px;}
     margin-left: 100px;
     margin-top: 60px;
     background-color: rgba(241,231,103,1);}
+=======
+    margin-left: 150px;
+    margin-top: 60px;}
+>>>>>>> 57720601afd3e65dfd380a2f477c5217f489546f
 
     .second-display, #gif-display{
       height: 50%;
@@ -62,13 +83,14 @@ margin-top: 60px;}
      border: 2px black solid;
      box-shadow: 10px 0px 15px -5px rgba(0,0,0,0.75);
     margin-left: 10%;
+    margin-top: 20px;
      overflow: hidden;
      padding: 10px;
      height: 520px;
      width: 960px;
 
-     background: url(background.jpg);
-    /* background-attachment: fixed; */
+    background: url(background1.jpeg);
+   
     background-size: 100%;
     background-repeat: no-repeat;
  }
