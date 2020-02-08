@@ -31,41 +31,23 @@ body{ background-color: #ffd369;
         color: seashell;
         font-family: 'Anton', sans-serif;
         font-size: 16px;
-<<<<<<< HEAD
-<<<<<<< Updated upstream
         margin-left: 150px;
         margin-top: 60px;
-        padding: 10px;}
-=======
+        padding: 10px;
         position: absolute;
         left: 870px;
         }
->>>>>>> Stashed changes
-=======
-        position: absolute;
-        left 250px;
-        }
->>>>>>> 57720601afd3e65dfd380a2f477c5217f489546f
 
  .joke-display,.second-display {
      border: 2px black solid;
      height: auto;
     width: auto;
     font-family: 'Anton', sans-serif;
-<<<<<<< Updated upstream
-    color: seashell;
-<<<<<<< HEAD
-margin-left: 150px;
-margin-top: 60px;}
-=======
     color: black;
-    margin-left: 100px;
-    margin-top: 60px;
-    background-color: rgba(241,231,103,1);}
-=======
+    background-color: rgba(241,231,103,1);
     margin-left: 150px;
-    margin-top: 60px;}
->>>>>>> 57720601afd3e65dfd380a2f477c5217f489546f
+    margin-top: 60px;
+}
 
     .second-display, #gif-display{
       height: 50%;
@@ -74,7 +56,6 @@ margin-top: 60px;}
     
     #gif-display{
       height: 70%;
->>>>>>> Stashed changes
 
     }
  .main-container{
