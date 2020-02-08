@@ -1,3 +1,24 @@
+var pushedButton="";
+$("button").on("click", function(){
+    pushedButton =$(this).text();
+    displayInfo(pushedButton);
+});
+function displayInfo(sentButton) { 
+    var api_URL = "https://sv443.net/jokeapi/v2/joke/"+sentButton;
+    $.ajax({
+        url: api_URL,
+        method: "GET"
+    }).then(function(response){
+            if(response.type==="single"){
+                $(".joke-display").text(response.joke);
+            }else{
+                var nextLine=$("<p>")
+                $(".joke-display").text(response.setup);
+                nextLine.text(response.delivery);
+                $(".joke-display").append(nextLine);
+            }
+        });
+}
 
 
 function sample_word(joke){
