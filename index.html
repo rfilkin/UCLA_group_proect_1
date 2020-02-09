@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./style.css">
     <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
-    
+    <script src="https://kit.fontawesome.com/15868ef2e3.js" crossorigin="anonymous"></script>
     
 
     <title>Just Jokes.</title>
@@ -13,17 +13,17 @@
 
 <body >
     <div class="header">
-        <div class= "item"><h2>Just Jokes.</h2></div>
+        <div class= "title"><h2>Just Jokes.</h2></div>
 
         <div class="intro">
-            In Need of a Random Joke? You're In The Right Place. Click one of the four categories below.
+           <h3> In Need of a Random Joke? You're In The Right Place. Click one of the four categories below.</h3>
         </div>
     </div>
     
     
     
     
-    <div class="main-container">
+    <div class="flex-container">
         <hr>
 
         <button>Any</button>
@@ -31,9 +31,17 @@
         <button>Misc</button>
         <button>Dark</button>
 
-        <hr>
+        <div class="search-container">
+            <form>
+              <input type="text" placeholder="Search Keywords or Phrases" name="search">
+              <button type="submit"><i class="fa fa-search"></i></button>
+            </form> 
+        </div>
+        
+            <hr>
 
         <div class="joke-display">
+<<<<<<< Updated upstream
         Quote Will Display Here!! 
 
         </div>
@@ -41,6 +49,25 @@
     </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="./script.js"></script>
+=======
+        Joke Will Display Here!! 
+        <hr>
+
+        </div>
+        
+        <div class="second-display">
+        Wait For It...
+        <hr>
+        <img id="gif-display" src="" alt="" style="margin-left: auto; margin-right: auto;" width="250px" height="300px">
+    </div>
+
+</div>
+<div class="footer">
+<h3>"He who laughs last, didn't get the joke." - Charles D. Gaulle</h3>
+</div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./script.js"></script>
+>>>>>>> Stashed changes
 
 </body>
 </html>
