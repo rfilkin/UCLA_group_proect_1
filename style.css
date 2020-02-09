@@ -1,104 +1,60 @@
 *{margin: 0;}
 
 
-body{ align-items: center;
+body{ 
+  align-items: center;
   align-content: center;
   background-color: #ffd369;
   display: inline-flexbox;
-  justify-content: center;
+  justify-content: center;}
 
-}
-
-<<<<<<< Updated upstream
-    .item {
-        color: seashell;
-        font-family: 'Anton', sans-serif;
-        font-size: 16px;
-        position: absolute;
-        left 250px;
-        }
-
- .joke-display{
-     border: 2px black solid;
-     height: 200px;
-    width: 700px;
-    font-family: 'Anton', sans-serif;
-    color: seashell;
-    margin-left: 150px;
-    margin-top: 60px;}
-
- .main-container{
-     align-content: center;
-     align-items: center;
-     border: 2px black solid;
-    margin-left: 10%;
-    margin-top: 20px;
-     overflow: hidden;
-     padding: 10px;
-     height: 760px;
-     width: 960px;
-=======
-
-
-.header{
-  background-color:#27496d;
-  border-bottom: black 5px solid;
+  .header {
+  background-color: #27496d;
+  border-bottom: 5px solid black;
   color: seashell;
   display: flex;
   font-family: 'Anton', sans-serif;
-  
-  height: 30px; 
-  justify-content: flex-start; 
+  height: 30px;
   width: 100%;
 }
+    .title, .intro {
+       color: seashell;
+        flex: 1;
+        font-size: 16px;
+        margin-top: 60px;
+        padding: 10px;
+       }
 
-.intro{
-  flex: 2;
-  }
+       button:hover{background-color: #27496d;}
 
-.title {
-  color: seashell;
-  font-family: 'Anton', sans-serif;
-  font-size: 16px;
-  flex: 1;
-  justify-content: space-around;
-  /* margin-left: 150px;
-  margin-top: 60px;
-  padding: 10px; */
-  /* position: absolute; */
-  /* left: 870px; */
-}
-
-button:hover{ background-color: #27496d}
-  
-button{
-  align-self: center;
-  background-color: #ffd369;
-  border: solid 1px black;
-  box-shadow: 10px 0px 15px -5px rgba(0,0,0,0.75);
-  cursor: grab;
-  font-family: 'Anton', sans-serif;
-  justify-content: space-around;
-  margin: 5px;
-  padding: 5px;}
-
-
-.flex-container{
-   align-content: center;
-  align-items: stretch;
-  background: url(background3.jpg);
-  background-size: 100%;
-  background-repeat: no-repeat;
-  border: 2px black solid;
-  box-shadow: 10px 0px 15px -5px rgba(0,0,0,0.75);
-  display: flexbox;
-  height: 520px;
-  justify-content: center;
-  margin: 10px;
-  margin-left: 200px;
-  width: 960px;
-  }
->>>>>>> Stashed changes
+       button{ 
+         align-self: center;
+         background-color: #ffd369;
+         border: solid 1px black;
+         box-shadow: 10px 0px 15px -5px rgba(0,0,0,0.75);
+      cursor: pointer;
+      font-family:'Anton', sans-serif;
+      justify-self: center;
+      margin: 5px;
+      padding: 5px;
+       }
+   
+ .flex-container{
+     align-content: center;
+     align-items: stretch;
+     background: url(background3.jpg);
+     background-size: 100%;
+     background-repeat: no-repeat;
+     border: 2px black solid;
+     box-shadow: 10px 0px 15px -5px rgba(0,0,0,0.75);
+   display: flexbox;
+   height: 520px;
+   justify-content: center;
+     margin: 10px;
+     margin-left: 200px;
+   overflow: hidden;
+     padding: 10px;
+     width: 960px;}
 
   .joke-display {
     background-color: #ffd369;
@@ -132,9 +88,9 @@ button{
       width: 300px;
      }
 
-<<<<<<< Updated upstream
+
  
-=======
+
 .footer {
   position: fixed;
   left: 0;
@@ -146,4 +102,4 @@ button{
   height: 30px;
   border-top: 5px solid black;
 }
->>>>>>> Stashed changes
+
