@@ -21,25 +21,34 @@ body{
        color: seashell;
         flex: 1;
         font-size: 16px;
+        margin-left: 150px;
         margin-top: 60px;
         padding: 10px;
-       }
+        position: absolute;
+        left: 870px;
+        }
 
-       button:hover{background-color: #27496d;}
+ .joke-display,.second-display {
+     border: 2px black solid;
+     height: auto;
+    width: auto;
+    font-family: 'Anton', sans-serif;
+    color: black;
+    background-color: rgba(241,231,103,1);
+    margin-left: 150px;
+    margin-top: 60px;
+}
 
-       button{ 
-         align-self: center;
-         background-color: #ffd369;
-         border: solid 1px black;
-         box-shadow: 10px 0px 15px -5px rgba(0,0,0,0.75);
-      cursor: pointer;
-      font-family:'Anton', sans-serif;
-      justify-self: center;
-      margin: 5px;
-      padding: 5px;
-       }
-   
- .flex-container{
+    .second-display, #gif-display{
+      height: 50%;
+      
+    }
+    
+    #gif-display{
+      height: 70%;
+
+    }
+ .main-container{
      align-content: center;
      align-items: stretch;
      background: url(background3.jpg);
@@ -47,13 +56,11 @@ body{
      background-repeat: no-repeat;
      border: 2px black solid;
      box-shadow: 10px 0px 15px -5px rgba(0,0,0,0.75);
-   display: flexbox;
-   height: 520px;
-   justify-content: center;
-     margin: 10px;
-     margin-left: 200px;
-   overflow: hidden;
+    margin-left: 10%;
+    margin-top: 20px;
+     overflow: hidden;
      padding: 10px;
+     height: 520px;
      width: 960px;}
 
   .joke-display {
@@ -103,3 +110,4 @@ body{
   border-top: 5px solid black;
 }
 
+ 
