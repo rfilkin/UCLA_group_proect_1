@@ -34,15 +34,16 @@ body{
 
 button:hover {background-color: #27496d;}
 
-button{
+.button{
   align-self: center;
   background-color: #ffd369;
   border: solid 1px black;
   box-shadow: 10px 0px 15px -5px rgba(0,0,0,0.75);
+  color: black;
   cursor: pointer;
   font-family: 'Anton', sans-serif;
   margin-top: 10px;
-  padding: 10px;}
+  padding: 3px;}
 
 #titlebtn{
   background-color: #ffd369;
@@ -116,7 +117,12 @@ button{
       overflow: hidden; 
       width: 300px;
      }
+#jokesonyou{
+  border: #27496d solid 4px;
+  margin-left: 200px;
+  margin-top: 30px;
 
+}
  
 
 .footer {
