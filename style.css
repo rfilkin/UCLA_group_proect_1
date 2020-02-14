@@ -10,6 +10,8 @@ body{
   background-color: #ffd369;
   display: inline-flexbox;
   justify-content: center;}
+ 
+  
 
   .header {
   background-color: #27496d;
@@ -17,6 +19,7 @@ body{
   color: seashell;
   display: flex;
   font-family: 'Anton', sans-serif;
+  
   height: 30px;
   justify-content: space-between;
   padding: 2px;
@@ -32,6 +35,10 @@ body{
       flex-wrap: nowrap;
       padding: 10px; }
 
+      .boxx{
+        height: 200px;
+        width: 225px;
+      }
 button:hover {background-color: #27496d;}
 
 .button{
@@ -66,23 +73,26 @@ button:hover {background-color: #27496d;}
      left: 800px;
 }
 
- .flex-container{
+.form {
+  width: 150px;
+}
+ .container{
      align-content: center;
      align-items: center;
      background: url(background3.jpg);
      background-size: 100%;
      background-repeat: no-repeat;
      border: 2px black solid;
-     box-shadow: 10px 0px 15px -5px rgba(0,0,0,0.75);
+     box-shadow: 0px 6px 25px -2px rgba(0,0,0,0.75);;
      display: flexbox;
      flex-direction: row;
      justify-content: center;
-      margin-left: 13%;
+     justify-items: center;
+      margin-left: 13.5%;
       margin-top: 20px;
      overflow: hidden;
      padding: 10px;
      text-align: center;
-     height: 540px;
      width: 960px;}
 
   .joke-display {
