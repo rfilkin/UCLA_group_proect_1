@@ -1,5 +1,5 @@
 var pushedButton="";
-$("button").on("click", function(){
+$(".button").on("click", function(){
     pushedButton =$(this).text();
     displayInfo(pushedButton);
 });
@@ -21,6 +21,11 @@ function displayInfo(sentButton) {
         gif_grabber();
     });
 }
+
+$("#search-btn").on("click", function(){
+    gif_searcher($("#search-box").val());
+    //displayInfo(pushedButton);
+});
 
 
 function sample_word(joke){
@@ -56,10 +61,24 @@ function gif_grabber(){
     });
 }
 
+function gif_searcher(searched_word){
+    var api_key = "XhXMrsEUUNOn44NMuFufbM8ji4bdOHdM"; //limit 42 requests per hour, 1000 requests per day
+    var queryURL = "https://api.giphy.com/v1/gifs/random?api_key=" + api_key +"&tag=" + searched_word;
+    console.log(queryURL);
+
+    $.ajax({
+        url: queryURL,
+        method: "GET"
+    }).then(function(response) {
+        console.log(response);
+        $("#gif-display").attr("src", response.data.image_original_url);
+    });
+}
+
 function joke_searcher(){
     event.preventDefault();
     //var api_URL = "https://jokeapi-v2.p.rapidapi.com/joke/Any?api_key=fa69145befmshc39d266ba3896ddp1a470ejsndddb85d59df4&contains=C%23"
-    var api_URL = "https://icanhazdadjoke.com/j/search?term=hipster";
+    var api_URL = "https://icanhazdadjoke.com/search?term=hipster";
     $.ajax({
         url: api_URL,
         method: "GET"
