@@ -3,9 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="./style.css">
-    <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
     
+    <!-- <link rel="stylesheet"  media="screen and (max-width: 768px)" type="text/css" href="./mobile.css"> -->
+    <!-- <link rel="stylesheet"media="screen and (min-width: 1100px)" type="text/css" href="./widescreen.css"> -->
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      
+    <!-- <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/> -->
+    <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/15868ef2e3.js" crossorigin="anonymous"></script>
     
 
     <title>Just Jokes.</title>
@@ -13,35 +20,49 @@
 
 <body >
     <div class="header">
-        <div class= "item"><h2>Just Jokes.</h2></div>
+        <div class= "title"><h2>Just Jokes |  Random Joke Generator | </div>
 
         <div class="intro">
-            In Need of a Random Joke? You're In The Right Place. Click one of the four categories below.
+           <h4> Click a <a class="button" href=".\redirect.html">Button</a> or Search a Keyword/Phrase</h4>
         </div>
     </div>
     
     
     
     
-    <div class="main-container">
+    <div class="flex-container">
         <hr>
 
-        <button>Any</button>
-        <button id="programming-button">Programming</button>
-        <button>Miscellaneous</button>
-        <button>Dark</button>
+        <button class="button">Any</button>
+        <button class="button" id="programming-button">Programming</button>
+        <button class="button">Miscellaneous</button>
+        <button class="button">Dark</button>
 
-        <hr>
-
-        <div class="joke-display">
-        Quote Will Display Here!! 
-        <hr>
+        <div class="search-container">
+            <form>
+              <input id="input" type="text" placeholder="Search Keywords or Phrases" name="search">
+              <button id="search-btn"><i class="fa fa-search"></i></button>
+              <button id="finish"> finish</button>
+            </form> 
         </div>
         
-        <div class="second-display">
-        wait for it...
+            <hr>
+
+        <div class="joke-display">
+        Jokes Will Display Here!! 
         <hr>
-            <img id="gif-display" src="" alt="" style="margin-left: auto; margin-right: auto;">
+        </div>
+        <div id="nextORstop"></div>
+        <div class="second-display">
+        Wait For It...
+        <hr>
+     <img id="gif-display" src="" alt="" style="margin-left: auto; margin-right: auto;" width="250px" height="300px">
+
+    </div>
+
+    <div class="footer">
+        <h3>"He Who Laughs Last, Didn't Get The Joke." - Charles D. Gaulle</h3>
+
     </div>
 
 </div>
