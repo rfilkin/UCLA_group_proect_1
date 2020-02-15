@@ -1,3 +1,4 @@
+
 var pushedButton="";
 $(".button").on("click", function(){
     pushedButton =$(this).text();
@@ -22,11 +23,201 @@ function displayInfo(sentButton) {
     });
 }
 
-$("#search-btn").on("click", function(){
-    gif_searcher($("#search-box").val());
-    //displayInfo(pushedButton);
-});
+var jokeNumber=0;
+//var i=0;
+var id=[0];
+function search() { 
+    var api_URL = "https://sv443.net/jokeapi/v2/joke/Any";
+    $.ajax({
+        url: api_URL,
+        method: "GET"
+    }).then(function(response){
+        var flag;
+        if (stopSign===true){return}
+        if(response.type==="single"){
+            var strng = response.joke;
+        } else{ 
+            var strng = response.setup+response.delivery;
+        } 
+        var incStr=false;
+        for (t=0;t<keyWords.length;t++){
+             incStr = strng.includes(keyWords[t]);
+             if (incStr)  {
+                 break;
+             }
+        }
+        //var incStr = strng.includes(keyWords[0],keyWords[1],keyWords[2]);  
+        if (response.type==="single" & incStr===true){
+            flag=$.inArray( response.id, id );
+            if (flag===-1){
+                id.push(response.id);
+                //i++;
+                jokeNumber++;
+                var parag=$("<p>");
+                var lineExtra=$("<hr>")
+                $(".joke-display").append(lineExtra);
+                $(parag).text(response.joke);
+                $(parag).append(lineExtra);
+                $(".joke-display").append(parag);
+                if (jokeNumber<2) {
+                    search();
+                }
+            } else{search()}   
+        } else{ if(response.type==="twopart" & incStr===true){
+                    flag=$.inArray( response.id, id );
+                    if (flag===-1){
+                        id.push(response.id);
+                        //i++;
+                        jokeNumber++;
+                        var lineExtra=$("<hr>")
+                        var parag=$("<p>");
+                        var nextLine=$("<p>");
+                        $(".joke-display").append(lineExtra);
+                        $(parag).text(response.setup);
+                        $(nextLine).text(response.delivery);
+                        $(parag).append(nextLine);
+                       // $(parag).append(lineExtra);
+                        $(".joke-display").append(parag);
+                        if (jokeNumber<2) {
+                            search();
+                        } 
+                    }  else{search()}   
+                 } else { if (jokeNumber<2 ) {search()}}
+            }
+    });
+}
 
+
+var j=0;
+var jd=[0];
+function search2(){
+    var settings = {
+        "async": true,
+        "crossDomain": true,
+        "url": "https://joke3.p.rapidapi.com/v1/joke",
+        "method": "GET",
+        "headers": {
+            "x-rapidapi-host": "joke3.p.rapidapi.com",
+            "x-rapidapi-key": "3367949124msh172f5ef1dc35cf5p149ef8jsnb141a19d717e"
+        }
+    }
+    $.ajax(settings).done(function (response) {
+        var strng = response.content;
+        var incStr=false;
+        for (t=0;t<keyWords.length;t++){
+             incStr = strng.includes(keyWords[t]);
+             if (incStr)  {
+                 break;
+             }
+        } 
+        var flag;
+        if (stopSign===true){return}
+        if (incStr===true){
+            flag=$.inArray( response.id, jd );
+            if (flag===-1){
+                jd.push(response.id);
+                //j++;
+                jokeNumber++
+                var parag=$("<p>");
+                var lineExtra=$("<hr>")
+                $(".joke-display").append(lineExtra);
+                $(parag).text(response.content);
+                //$(parag).append(lineExtra);
+                $(".joke-display").append(parag);
+                if (jokeNumber<1) {
+                    search2();
+                }
+            }else{search2();}   
+        } else{search2();}
+    });
+}
+
+
+
+//prepend
+
+
+var k=0;
+var kd=[0];
+function search3() { 
+    var api_URL = "http://api.icndb.com/jokes/random/";
+    if (stopSign===true){return}
+    $.ajax({
+        url: api_URL,
+        method: "GET"
+    }).then(function(response){
+        var strng = response.value.joke;
+        var incStr=false;
+        for (t=0;t<keyWords.length;t++){
+             incStr = strng.includes(keyWords[t]);
+             if (incStr)  {
+                 break;
+             }
+        }
+        var flag;
+        if (incStr===true){
+            flag=$.inArray( response.value.id, kd );
+            if (flag===-1){
+                kd.push(response.id);
+                //k++;
+                jokeNumber++
+                var lineExtra=$("<hr>")
+                var parag=$("<p>");
+                $(".joke-display").append(lineExtra);
+                $(parag).text(response.value.joke);
+               // $(parag).append(lineExtra);
+                $(".joke-display").append(parag);
+                if (jokeNumber<2) {
+                    search3();
+                }
+            }else{search3();}   
+        } else{search3();}
+    });
+}
+
+var nextJokes=$("<button>").text("next");
+var stopSearching=$("<button>").text("stop");
+var keyWords;
+$("#search-btn").on("click", function(event){
+    event.preventDefault();
+    stopSign= false;
+    $("#nextORstop").empty();
+    $(".joke-display").empty();
+    $(".joke-display").text("Loading... ")
+    // var nextJokes=$("<button>").text("next");
+    // var stopSearching=$("<button>").text("stop");
+    $("#nextORstop").append(nextJokes,stopSearching);
+        keyWords=$("#search-box").val().split(" ");
+    search();
+    search2();
+    search3();
+    gif_searcher(keyWords[0]);
+})
+
+
+
+var stopSign= false;
+$("#finish").on("click", function(event){
+    event.preventDefault();
+    stopSign= true;
+
+})
+
+
+$(nextJokes).on("click", function(){
+    jokeNumber=0;
+    $(".joke-display").empty();
+    $(".joke-display").text("Loading... ")
+    gif_searcher(keyWords[0]);
+    search();
+    search2();
+    search3();
+})
+
+$(stopSearching).on("click", function(){
+    jokeNumber=0;
+    stopSign= true;
+})
 
 function sample_word(joke){
     //grabs a non-common word from a given joke (so no "the", "or", "are")
@@ -128,20 +319,21 @@ $("#gif-copy-btn").on("click", copyGif);
 
 // $("#search-btn").on("click", joke_searcher);
 
-// $("#programming-button").on("click", function() {
 
-//     var sampled_word = sample_word("The quick brown fox jumps over the lazy dog");
-//     console.log(sampled_word);
 
-//     var api_key = "XhXMrsEUUNOn44NMuFufbM8ji4bdOHdM"; //limit 42 requests per hour, 1000 requests per day
-//     var queryURL = "https://api.giphy.com/v1/gifs/random?api_key=" + api_key +"&tag=" + sampled_word;
-//     console.log(queryURL);
-
+// function joke_searcher(){
+//     event.preventDefault();
+//     //var api_URL = "https://jokeapi-v2.p.rapidapi.com/joke/Any?api_key=fa69145befmshc39d266ba3896ddp1a470ejsndddb85d59df4&contains=C%23"
+//     var api_URL = "https://icanhazdadjoke.com/j/search?term=hipster";
 //     $.ajax({
-//         url: queryURL,
+//         url: api_URL,
 //         method: "GET"
-//     }).then(function(response) {
+//     }).then(function(response){
+//         console.log("looking for dad jokes");
 //         console.log(response);
-//         $("#gif-display").attr("src", response.data.image_original_url);
+//         $(".joke-display").text(response.joke);
 //     });
-// });
+// }
+ 
+
+
