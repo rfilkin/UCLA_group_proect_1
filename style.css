@@ -129,11 +129,19 @@ button:hover {background-color: #27496d;}
      }
 #jokesonyou{
   border: #27496d solid 4px;
-  margin-left: 200px;
-  margin-top: 30px;
-
-}
- 
+  display: flex;
+  margin: auto;}
+  
+#redirect{
+    background-color: #ffd369;
+    border: solid 1px black;
+    color: black;
+    cursor: pointer;
+    font-size: 20px;
+    margin: auto;
+    padding: 20px 34px;
+    text-align: center;}
+/* //footer// */
 
 .footer {
   background-color:#27496d;
