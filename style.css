@@ -30,9 +30,14 @@ body{
   #navbar ul {
     align-items: center;
     display: flex;
+<<<<<<< Updated upstream
     list-style: none;
     font-size: 24px;
   }
+=======
+    font-size: 20px;
+    list-style: none;}
+>>>>>>> Stashed changes
 
   #navbar ul li a{ 
     color: seashell;
@@ -40,9 +45,11 @@ body{
     text-decoration: none;}
 
   #navbar ul li a:hover {
-    background-color: #ffd369;}
+    background-color: #ffd369;
+  }
 
   #welcome{
+<<<<<<< Updated upstream
       border: black 2px solid;
       box-shadow: 10px 0px 15px -5px rgba(0,0,0,0.75);} 
       
@@ -57,6 +64,18 @@ body{
 
   /*  #main-page2,  */
   .header {
+=======
+      border-color: black 1px;
+      box-shadow: 10px 0px 15px -5px rgba(0,0,0,0.75); 
+      margin-top: 20px;} 
+
+  #main-page, #main-page2{
+    background: #ffd369 url(./yellow-background.jpg);
+    background: no-repeat cover;
+    height: 100vh;}
+
+   .header{
+>>>>>>> Stashed changes
       align-items: center;
       color: black;
       display: flex;
@@ -64,10 +83,18 @@ body{
       flex-direction: column;
       height: 100%;
       text-align: center;
+<<<<<<< Updated upstream
       justify-content: center;}
      
 
      
+=======
+      justify-content: center;
+      }
+
+     
+
+>>>>>>> Stashed changes
 button:hover {background-color: #27496d;}
 
 .button{
@@ -89,20 +116,44 @@ button:hover {background-color: #27496d;}
 }
 
 
+<<<<<<< Updated upstream
+=======
+.title {
+  background-color: #27496d;
+  color: seashell;
+  display: flex;
+  font-size: 24px;
+  justify-content: center;
+  border-bottom: 5px solid black;}
+   
+>>>>>>> Stashed changes
 .container{
      align-content: center;
      align-items: center;
+     align-self: center;
      background: url(background3.jpg);
      background-size: 100%;
+<<<<<<< Updated upstream
      background-repeat: no-repeat;
      border: 2px black solid;
      box-shadow: 0px 6px 25px -2px rgba(0,0,0,0.75);
+=======
+     background: cover;
+     border: 2px #ffd369 solid;
+     box-shadow: -1px 2px 14px -1px rgba(0,0,0,0.75);
+>>>>>>> Stashed changes
      display: flexbox;
      flex-direction: row;
      justify-content: center;
+<<<<<<< Updated upstream
      height: auto;
      width: auto;
     overflow: hidden;
+=======
+     margin: auto;
+     max-height: 80vh;
+     max-width: 80vw;
+>>>>>>> Stashed changes
      padding: 5px;
      text-align: center;} 
     
@@ -146,6 +197,10 @@ button:hover {background-color: #27496d;}
       border: 2px black solid;
       }
 
+#two{
+  background: url(./blue-background.png);
+}
+
 /* Redirect to Contact Page */
 
 #jokesonyou{
@@ -154,7 +209,7 @@ button:hover {background-color: #27496d;}
   margin: auto;}
   
 #redirect{
-    background-color: #ffd369;
+    background-color: #a19e97;
     border: solid 1px black;
     color: black;
     cursor: pointer;
@@ -162,6 +217,7 @@ button:hover {background-color: #27496d;}
     margin: auto;
     padding: 20px 34px;
     text-align: center;}
+<<<<<<< Updated upstream
   
 .title{
       background-color: #27496d;
@@ -172,15 +228,28 @@ button:hover {background-color: #27496d;}
        
 
     /* //footer// */
+=======
+
+/* //footer// */
+>>>>>>> Stashed changes
 
 .footer {
   background-color:#27496d;
   bottom: 0;
   border-top: 5px solid black;
+<<<<<<< Updated upstream
   color: white;
   
   
  
+=======
+  color: seashell;
+  font-family: 'Coda Caption', sans-serif;
+  height: auto;
+  left: 0;
+  padding: 5px;
+  margin-top: auto;
+>>>>>>> Stashed changes
   text-align: center;
   width: 100%;
 }
