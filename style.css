@@ -9,36 +9,66 @@ body{
   align-content: center;
   background-color: #ffd369;
   display: inline-flexbox;
-  justify-content: center;}
+  justify-content: center;
+  font-family: 'Anton', sans-serif;}
  
   
 
-  .header {
-  background-color: #27496d;
-  border-bottom: 5px solid black;
-  color: seashell;
-  display: flex;
-  font-family: 'Anton', sans-serif;
-  
-  height: 30px;
-  justify-content: space-between;
-  padding: 2px;
-  
-}
-    .title, .intro {
-      align-items: center;
-      color: seashell;
-      display: flex;
-      flex: 3;
-      font-size: 16px;
-      margin-left: 150px;
-      flex-wrap: nowrap;
-      padding: 10px; }
+.text-primary{
+    color:#ffd369;}
 
-      .boxx{
-        height: 200px;
-        width: 225px;
+  #navbar {
+    background:#27496d; 
+    border-bottom: 5px solid black;
+    color:seashell;
+    display:flex;
+    justify-content: space-between;
+    padding:10px;
+    position: sticky;
+    top:0;}
+
+  #navbar ul {
+    align-items: center;
+    display: flex;
+    font-size: 20px;
+    list-style: none;}
+
+  #navbar ul li a{ 
+    color: seashell;
+    padding: 10px;
+    text-decoration: none;}
+
+  #navbar ul li a:hover {
+    background-color: #ffd369;
+  }
+
+  #welcome{
+      border: black 2px solid;
+      box-shadow: 10px 0px 15px -5px rgba(0,0,0,0.75);} 
+      
+
+  #main-page{
+    background: #ffd369 url(./yellow-background.jpg);
+    background: center cover;
+    height: 100vh;
+    padding: 10px;
+    }
+    
+
+  /*  #main-page2,  */
+  .header {
+      align-items: center;
+      color: black;
+      display: flex;
+      font-size: 24px;
+      flex-direction: column;
+      height: 100%;
+      text-align: center;
+      justify-content: center;
       }
+
+     
+
 button:hover {background-color: #27496d;}
 
 .button{
@@ -50,7 +80,8 @@ button:hover {background-color: #27496d;}
   cursor: pointer;
   font-family: 'Anton', sans-serif;
   margin-top: 10px;
-  padding: 3px;}
+  padding: 3px;
+  text-decoration: none;}
 
 #titlebtn{
   background-color: #ffd369;
@@ -58,45 +89,41 @@ button:hover {background-color: #27496d;}
   padding: 0;
 }
 
-   #redirect{
-     background-color: #ffd369;
-     border: solid 1px black;
-     color: black;
-     padding: 20px 34px;
-     text-align: center;
-     display: inline-block;
-     font-size: 20px;
-     margin: 4px 2px;
-     cursor: pointer;
-     position: absolute;
-     top: 200px;
-     left: 800px;
-}
 
-.form {
-  width: 150px;
-}
- .container{
+.title {
+  background-color: #27496d;
+  color: seashell;
+  display: flex;
+  font-size: 24px;
+  justify-content: center;
+  border-bottom: 5px solid black;}
+   
+.container{
      align-content: center;
      align-items: center;
+     align-self: center;
      background: url(background3.jpg);
      background-size: 100%;
-     background-repeat: no-repeat;
-     border: 2px black solid;
-     box-shadow: 0px 6px 25px -2px rgba(0,0,0,0.75);;
+     background: cover;
+     border: 2px #ffd369 solid;
+     box-shadow: -1px 2px 14px -1px rgba(0,0,0,0.75);
      display: flexbox;
      flex-direction: row;
      justify-content: center;
-     justify-items: center;
-      margin-left: 13.5%;
-      margin-top: 20px;
-     overflow: hidden;
-     padding: 10px;
-     text-align: center;
-     width: 960px;}
+     margin: auto;
+     max-height: 100%;
+     max-width: 80vw;
+     padding: 5px;
+     text-align: center;} 
+    
+.search-container{
+    
+      justify-content: space-around;
+      margin-top: 10px;
+      }
 
-  .joke-display {
-    background-color: rgba(69, 67, 212, 0.473);
+.joke-display {
+    background-color: rgba(69, 67, 212, 0.50);
      border: 2px black solid;
      color: black;
      flex: 1;
@@ -107,33 +134,42 @@ button:hover {background-color: #27496d;}
      width: auto;
    }
   
-  .search-container{
-    flex: 1;
-    justify-content: space-around;
-    margin-top: 10px;
-  
-  }
-    .second-display, #gif-display{
+   #nextORstop{
+
+   }
+    
+.second-display, #gif-display{
       align-items: center;
       align-content: center;
+      align-self: center;
       background-color: rgba(69, 67, 212, 0.473);
-      border: 2px black solid;
+      
       color: black;
       font-family: 'Anton', sans-serif;
-      height: 300px;
-      margin-left: 350px;
-      margin-top: 10px; 
+      height: 50vh;
+      margin: auto;
+      
       justify-content: center;
-      overflow: hidden; 
-      width: 300px;
-     }
+     overflow: hidden;
+      width:60vw;}
+    
+.second-display{
+      border: 2px black solid;
+      }
+
+#jokes{
+  background: url(./blue-background.png);
+}
+
+/* Redirect to Contact Page */
+
 #jokesonyou{
   border: #27496d solid 4px;
   display: flex;
   margin: auto;}
   
 #redirect{
-    background-color: #ffd369;
+    background-color: #a19e97;
     border: solid 1px black;
     color: black;
     cursor: pointer;
@@ -141,16 +177,19 @@ button:hover {background-color: #27496d;}
     margin: auto;
     padding: 20px 34px;
     text-align: center;}
+
 /* //footer// */
 
 .footer {
   background-color:#27496d;
   bottom: 0;
   border-top: 5px solid black;
-  color: white;
-  height: 30px;
+  color: seashell;
+  font-family: 'Coda Caption', sans-serif;
+  position: relative;
   left: 0;
-  position: fixed;
+  padding: 5px;
+  margin-top: auto;
   text-align: center;
   width: 100%;
 }
