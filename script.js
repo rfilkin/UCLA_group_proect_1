@@ -304,41 +304,6 @@ function copyGif(){
     document.execCommand("copy");
 }
 $("#gif-copy-btn").on("click", copyGif); //when the copy gif button is pressed, copies the link of the current gif to the clipboard
-
-
-
-// function joke_searcher(){
-//     //attempt at direct joke searching via the dad jokes API. Attempt wasn't successful, so this is abandoned
-//     event.preventDefault();
-//     //var api_URL = "https://jokeapi-v2.p.rapidapi.com/joke/Any?api_key=fa69145befmshc39d266ba3896ddp1a470ejsndddb85d59df4&contains=C%23"
-//     var api_URL = "https://icanhazdadjoke.com/search?term=hipster";
-//     $.ajax({
-//         url: api_URL,
-//         method: "GET"
-//     }).then(function(response){
-//         console.log("looking for dad jokes");
-//         console.log(response);
-//         $(".joke-display").text(response.joke);
-//     });
-// }
-
-// $("#search-btn").on("click", joke_searcher);
-
-
-
-// function joke_searcher(){
-//     event.preventDefault();
-//     //var api_URL = "https://jokeapi-v2.p.rapidapi.com/joke/Any?api_key=fa69145befmshc39d266ba3896ddp1a470ejsndddb85d59df4&contains=C%23"
-//     var api_URL = "https://icanhazdadjoke.com/j/search?term=hipster";
-//     $.ajax({
-//         url: api_URL,
-//         method: "GET"
-//     }).then(function(response){
-//         console.log("looking for dad jokes");
-//         console.log(response);
-//         $(".joke-display").text(response.joke);
-//     });
-// }
  
 
 
