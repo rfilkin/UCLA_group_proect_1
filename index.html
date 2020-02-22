@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" type="text/css" href="./style.css">
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+
+
+
+
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      
-
+    <link type="text/css" rel="stylesheet" href="./materialize/css/materialize.min.css" media="screen,projection" />
+    <link rel="stylesheet" type="text/css" href="./style.css">
     <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/15868ef2e3.js" crossorigin="anonymous"></script>
+
     <!-- <script
     src=""
     data-channel-id="bcb12b70-613f-46d7-a397-e29b16fdf842"
@@ -20,108 +22,152 @@
     id="cai-webclient-custom">
     </script> -->
 
-    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
     <title>Just Jokes.</title>
 </head>
 
 <body id="home">
+
+
+
     <!-- Nav Bar -->
-    <nav id="navbar">
-        <!-- Just Jokes Title -->
-        <h1> <span class="text-primary">
-                <i class="far fa-smile-wink"></i> Just </span>Jokes. </h1>
-        <!-- Nav Bar Links -->
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#jokes">Jokes & GiFs</a></li>
-            
-            <li><a href=".\redirect.html">Surprise!!</a></li>
-        </ul>
-    </nav>
+    <div class="navbar-fixed">
+        <nav id="navbar">
+            <div class="nav-wrapper">
 
+                <!-- Just Jokes Title -->
 
-    <!-- Welcome Page -->
+                <h1 class="left hide-on-med-and-down"> <span class="text-primary">
+                        <i class="far fa-smile-wink"></i> Just </span>Jokes. </h1>
+
+                <!-- Nav Bar Links -->
+
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li class="active"><a href="#home">Home</a></li>
+                    <li><a href="#jokes">Jokes & GiFs</a></li>
+                    <li><a href="#contact">Surprise!!</a></li>
+                </ul>
+            </div>
+
+        </nav>
+    </div>
+
+    <!-- //Welcome Page// -->
     <header id="main-page">
         <div class="header">
             <img id="welcome" src="welcome.jpg" alt="welcome message" width="300px" height="300px">
 
 
-            <!-- <div class="title"> -->
-            <h2>| Random Joke & GiF Generator |</h2>
-            <!-- </div> -->
+            <div class="t1tle">
+                <h2>| Random Joke & GiF Generator |</h2>
+            </div>
 
-            <!-- <div class="intro"> -->
-            <h4> Click a <a class=button href=".\redirect.html">Button</a> or Search a Keyword/Phrase</h4>
-            <!-- </div> -->
+            <div class="intro">
+                <h4> Click a <a class="btn" href="#contact">Button</a> or Search a Keyword/Phrase</h4>
+            </div>
         </div>
     </header>
-            <hr>
 
 
 
-        <section id="jokes">
-            <div class="container">
-                <hr>
-
-                <button class="button">Any</button>
-                <button class="button" id="programming-button">Programming</button>
-                <button class="button">Miscellaneous</button>
-                <button class="button">Dark</button>
-
-                <div class="search-container">
-                    <form>
-                        <input id="search-box" type="text" placeholder="Search Keywords or Phrases" name="search"
-                            size="50">
-                        <button class="button" id="search-btn"><i class="fa fa-search"></i></button>
-                        <button class="button" id="finish"> finish</button>
-                    </form>
-                </div>
-
-                <hr>
-
-                <div class="joke-display">
+    <section class="section" id="jokes">
+        <div class="container">
 
 
-                </div>
-                <div class="button" id="nextORstop"> Next </div>
-                <button class="button" id="joke-copy-btn">Copy Joke</button>
-                <!-- gif generator display -->
-                <button class="button" id="gif-copy-btn">Copy Gif</button>
-                <div class="second-display">
 
-                    
-                    <img id="gif-display" src="" alt="" style="margin-left: auto; margin-right: auto;" width="250px"
-                        height="300px">
-                        
-                    </div>
-                
-        </section>
+            <button class="button gif-trigger  btn "><i class="material-icons left">tag_faces</i>Any</button>
+
+            <button class="button gif-trigger  btn " id="programming-button"><i
+                    class="material-icons left">system_update</i>Programming</button>
+
+            <button class="button gif-trigger  btn "><i
+                    class="material-icons left ">insert_emoticon</i>Miscellaneous</button>
+
+            <button class="button gif-trigger  btn "><i class="material-icons left">pan_tool</i>Dark</button>
+
+            <!--Search  -->
+            <div class="search-container">
+                <form>
+                    <input id="search-box" type="text" placeholder="Search Keywords or Phrases" name="search" size="50">
+                    <button class="btn" id="search-btn"><i class="fa fa-search"></i></button>
+                    <button class="btn" id="finish"> Finish</button>
+                </form>
+            </div>
 
 
-       
-       
-        <section class="footer"> 
-        
-            <h3>"He Who Laughs Last, Didn't Get The Joke." - Charles D. Gaulle</h3>
 
-       
+            <div class="joke-display">
+            </div>
+
+            <div class="btn" id="nextORstop"><i class="material-icons left ">arrow_forward</i> Next </div>
+            <div class="btn" id="nextORstop"><i class="material-icons left ">report</i> Stop </div>
+            <button class="btn" id="joke-copy-btn">Copy Joke<i class="material-icons left ">content_copy</i> </button>
+           
+            <!-- gif generator display -->
+            <button class="btn" id="gif-copy-btn">Copy Gif<i class="material-icons left ">content_copy</i></button>
+            <div class="second-display">
+
+
+            <img id="gif-display" src="" alt="" style="margin-left: auto; margin-right: auto;" width="250px" height="300px">
+
+            </div>
+
     </section>
+
+   <section class="section" id="contact">
+       <div class="hold">
+    <div class="title">
+            <h5>| While you are here: Take some time to connect with your new favorite developers <i
+                    class="fas fa-arrow-right"></i>| Contact Us</h5>
+                
+        
+        <ul id="meetUs">
+            <li><a class="btn" href="https://github.com/rfilkin">Robert</a></li>
+            <li><a class="btn" href="https://github.com/Ahmadreza923">Ahmad</a></li>
+            <li><a class="btn" href="https://github.com/gwenniegwen">Gwendolyn</a></li>
+        </ul>
     
-</div>
-
-
-
-
-
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-        <script src="./script.js"></script>
-        <script type="text/javascript" src="js/materialize.min.js"></script>
+        <!-- <a class="btn" id="redirect" href="./index.html">Click Here to Retrun To Main Page</a> -->
+    </div>
+    
 
        
+            <img id="jokesonyou" src="jokesonyou.jpg" alt="" width="500px" height="500px">
+        
+
+       
+            
+        
+        </div>
+        
+    
+
+
+  <div class = "footer" id="footer">
+
+        <h5><strong>"He Who Laughs Last, Didn't Get The Joke." - Charles D. Gaulle</h5></strong>
+
+
+   
+
+    </div>  
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="./script.js"></script>
+
+
+
+
 
 
 
@@ -135,7 +181,7 @@
     <!-- mobile responsive -->
     <meta name="viewport" content="width=device-width">
 
-      
 
 </body>
+
 </html>
