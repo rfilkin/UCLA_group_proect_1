@@ -105,13 +105,14 @@ flex: 1;
 font-family: 'Anton', sans-serif;
 height: auto; 
 justify-content: space-around;
-margin-top: 40px;
 width: auto;
+margin:0px;
              }
 
 .search-container{  
 justify-content: space-around;
 margin-top: 10px;
+background-color:  rgba(69, 67, 212, 0.70);
               }
         
 .second-display, #gif-display{
