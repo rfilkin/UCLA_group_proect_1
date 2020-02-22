@@ -1,7 +1,8 @@
 
 var pushedButton="";
 $(".button").on("click", function(){
-    pushedButton =$(this).text();
+    pushedButton =$(this).attr("txt");
+    console.log("pushed button: " + pushedButton);
     displayInfo(pushedButton);
 });
 
@@ -305,7 +306,7 @@ function copyGif(){
 }
 
 
-$('#navbar a, .btn').on('click', function(event){
+$('#navbar a, .btn-scroll').on('click', function(event){
     if (this.hash !== ' ') {
         event.preventDefault();
         const hash = this.hash;
