@@ -303,7 +303,24 @@ function copyGif(){
     /* Copy the text inside the text field */
     document.execCommand("copy");
 }
+
+
+$('#navbar a, .btn').on('click', function(event){
+    if (this.hash !== ' ') {
+        event.preventDefault();
+        const hash = this.hash;
+        $('html, body').animate(
+            {scrollTop: $(hash).offset().top- 100
+            },
+         800  
+        );
+    }
+
+});
+
+
 $("#gif-copy-btn").on("click", copyGif); //when the copy gif button is pressed, copies the link of the current gif to the clipboard
+
  
 
 
