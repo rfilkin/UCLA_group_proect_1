@@ -5,8 +5,8 @@ $(".button").on("click", function(){
     displayInfo(pushedButton);
 });
 
-function displayInfo(sentButton) { 
-    var api_URL = "https://sv443.net/jokeapi/v2/joke/"+sentButton;
+function displayInfo(sentButton) {
+    var api_URL = "https://sv443.net/jokeapi/v2/joke/"+sentButton; //grabs a joke with the given category from the API.
     $.ajax({
         url: api_URL,
         method: "GET"
@@ -19,9 +19,9 @@ function displayInfo(sentButton) {
             nextLine.text(response.delivery);
             $(".joke-display").append(nextLine);
         }
-        gif_grabber();
     });
 }
+$(".gif-trigger").on("click", gif_grabber); //grabs a gif using random word sampling, if one of the main 4 buttons (marked "gif-trigger" class) is pressed
 
 var jokeNumber=0;
 //var i=0;
@@ -220,7 +220,8 @@ $(stopSearching).on("click", function(){
 })
 
 function sample_word(joke){
-    //grabs a non-common word from a given joke (so no "the", "or", "are")
+    //grabs a non-common word from a given joke (so no "the", "or", "are") and returns it
+
     var blacklist = ["the", "of", "or", "are", "is", "to", "that", "for", "as", "test"];
     var words = joke.split(" ");
     var result = "";
@@ -236,6 +237,8 @@ function sample_word(joke){
 }
 
 function gif_grabber(){
+    //samples a random word from the currently-displayed joke, and sends that word to the giphy API. Displays the resulting gif.
+
     var sampled_word = sample_word($(".joke-display").text());
     console.log(sampled_word);
 
@@ -253,6 +256,8 @@ function gif_grabber(){
 }
 
 function gif_searcher(searched_word){
+    //given a search word, searches the giphy API for a gif and displays the result
+
     var api_key = "XhXMrsEUUNOn44NMuFufbM8ji4bdOHdM"; //limit 42 requests per hour, 1000 requests per day
     var queryURL = "https://api.giphy.com/v1/gifs/random?api_key=" + api_key +"&tag=" + searched_word;
     console.log(queryURL);
@@ -272,16 +277,15 @@ function copyJoke(){
     joke_holder.style.height = 0;
     joke_holder.style.width  = 0;
     joke_holder.value = $(".joke-display").text().trim();
-    document.body.appendChild(joke_holder); //add element into the page
+    document.body.appendChild(joke_holder); //add element into the page that will hold the joke for copying
 
     joke_holder.select();
-    joke_holder.setSelectionRange(0, 99999); /*For mobile devices*/
+    joke_holder.setSelectionRange(11, 99999); /*For mobile devices*/ //we start at index 11 so that we don't copy the "Loading..." text
 
     /* Copy the text inside the text field */
     document.execCommand("copy");
 }
-
-$("#joke-copy-btn").on("click", copyJoke);
+$("#joke-copy-btn").on("click", copyJoke); //when the copy joke button is pressed, copies the current joke to the clipboard
 
 function copyGif(){
     //copies the giphy url of the currently displayed gif to the clipboard
@@ -289,7 +293,7 @@ function copyGif(){
     link_holder.style.height = 0;
     link_holder.style.width  = 0;
     link_holder.value = $("#gif-display").attr("src");
-    document.body.appendChild(link_holder); //add element into the page
+    document.body.appendChild(link_holder); //add element into the page that will hold the link for copying
 
     //console.log(link_holder.value);
 
@@ -300,9 +304,7 @@ function copyGif(){
     document.execCommand("copy");
 }
 
-$("#gif-copy-btn").on("click", copyGif);
 
-//smooth scroll//
 $('#navbar a, .btn').on('click', function(event){
     if (this.hash !== ' ') {
         event.preventDefault();
@@ -315,4 +317,10 @@ $('#navbar a, .btn').on('click', function(event){
     }
 
 });
+
+
+$("#gif-copy-btn").on("click", copyGif); //when the copy gif button is pressed, copies the link of the current gif to the clipboard
+
+ 
+
 
