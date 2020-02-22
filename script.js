@@ -324,3 +324,4 @@ $("#gif-copy-btn").on("click", copyGif); //when the copy gif button is pressed, 
  
 
 
+
