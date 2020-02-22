@@ -302,6 +302,20 @@ function copyGif(){
 
 $("#gif-copy-btn").on("click", copyGif);
 
+//smooth scroll//
+$('#navbar a, .btn').on('click', function(event){
+    if (this.hash !== ' ') {
+        event.preventDefault();
+        const hash = this.hash;
+        $('html, body').animate(
+            {scrollTop: $(hash).offset().top- 100
+            },
+         800  
+        );
+    }
+
+});
+
 // function joke_searcher(){
 //     //attempt at direct joke searching via the dad jokes API. Attempt wasn't successful, so this is abandoned
 //     event.preventDefault();
